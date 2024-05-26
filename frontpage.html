@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PharmaExpect - Pharmacy Management System</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #28a745;
+            --secondary-color: #ffc107;
+            --text-color: #333;
+            --background-color: #f8f9fa;
+            --border-radius: 5px;
+            --box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            --transition: all 0.3s ease;
+        }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        header h1 {
+            font-size: 24px;
+            margin: 0;
+            padding: 0 20px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav input[type="search"] {
+            padding: 8px;
+            border-radius: var(--border-radius);
+            border: 1px solid #ccc;
+            width: 70%;
+            transition: var(--transition);
+        }
+        nav input[type="search"]:focus {
+            outline: none;
+            border-color: var(--secondary-color);
+        }
+        nav button {
+            padding: 8px 15px;
+            border: none;
+            background-color: var(--secondary-color);
+            color: var(--text-color);
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        nav button:hover {
+            background-color: var(--text-color);
+            color: var(--secondary-color);
+        }
+        nav .nav-link {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 18px;
+            transition: var(--transition);
+        }
+        nav .nav-link:hover {
+            text-decoration: underline;
+        }
+        .hero {
+            background: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://source.unsplash.com/1600x900/?pharmacy') no-repeat center center/cover;
+            height: 70vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            padding: 0 20px;
+        }
+        .hero h2 {
+            font-size: 48px;
+            margin: 0;
+            animation: fadeInDown 1s;
+        }
+        .hero p {
+            font-size: 24px;
+            margin: 10px 0 20px;
+            animation: fadeInUp 1s;
+        }
+        .hero a {
+            background-color: var(--secondary-color);
+            color: var(--text-color);
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: var(--border-radius);
+            font-weight: bold;
+            transition: var(--transition);
+            animation: fadeIn 1.5s;
+        }
+        .hero a:hover {
+            background-color: var(--text-color);
+            color: var(--secondary-color);
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .section {
+            padding: 40px 0;
+        }
+        .section h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 32px;
+            position: relative;
+        }
+        .section h2::after {
+            content: '';
+            width: 50px;
+            height: 4px;
+            background-color: var(--primary-color);
+            display: block;
+            margin: 10px auto 0;
+        }
+        .features, .about, .contact {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .features div, .about div, .contact div {
+            flex: 1;
+            margin: 10px;
+            padding: 20px;
+            background-color: var(--background-color);
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            transition: var(--transition);
+        }
+        .features div:hover, .about div:hover, .contact div:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 15px rgba(0,0,0,0.2);
+        }
+        .feature h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>PharmaExpect</h1>
+            <nav>
+                <input type="search" placeholder="Search products...">
+                <button type="button">Search</button>
+                <a href="frontpage.html" class="nav-link"><i class="fas fa-home fa-lg"></i> Home</a>
+                <a href="service.html" class="nav-link"><i class="fas fa-cogs fa-lg"></i> Services</a>
+                <a href="aboutus.html" class="nav-link"><i class="fas fa-info-circle fa-lg"></i> AboutUs</a>
+                <a href="contactus.html" class="nav-link"><i class="fas fa-address-book fa-lg"></i> Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h2>Welcome to PharmaExpect</h2>
+            <p>Your Health, Our Priority</p>
+            <a href="login.html" class="cta-button">Get Started</a>
+        </div>
+    </section>
+
+    <section class="section features">
+        <div class="container">
+            <h2>Key Features</h2>
+            <div class="feature">
+                <h3>Prescription Management</h3>
+                <p>Effortlessly manage prescriptions, refills, and patient information.</p>
+            </div>
+            <div class="feature">
+                <h3>Inventory Control</h3>
+                <p>Keep track of stock levels, automate reordering, and manage suppliers.</p>
+            </div>
+            <div class="feature">
+                <h3>Reporting & Analytics</h3>
+                <p>Monitor sales, inventory, and performance with customizable reports.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section about">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>PharmaExpect is a pharmacy management system designed to streamline operations. It offers features like prescription management, inventory control, and 24/7 customer support. With a user-friendly interface, it empowers pharmacists to focus on patient care while simplifying administrative tasks.</p>
+        </div>
+    </section>
+
+    <section class="section contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <div>
+                <p>Email: support@PharmaExpect.com</p>
+                <p>Phone: (123) 456-7890</p>
+                <p>Address: 123 Pharma, Bangalore, India</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 PharmaExpect. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

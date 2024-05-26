@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PharmaExpect-Services</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-dceY+pNRG1EeupDO2Z7R5aXCEPiVfc2CGjrK2kq1v9dKknYQjbGlAaC3gXw3bP0olP3H0gicAca9MGkqWz5U/g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #53a7ea, #2979bb);
+            color: #fff;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px;
+            position: relative;
+            z-index: 1;
+        }
+        h1 {
+            text-align: left; /* Align to the left */
+            margin-bottom: 40px;
+            font-size: 3rem;
+            color: #fff;
+        }
+
+        /* Service Section Styles */
+        .service {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 40px;
+            padding-top: 20px;
+        }
+        .service-item {
+            flex: 0 0 calc(33.33% - 40px);
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            padding: 40px;
+            transition: transform 0.3s ease;
+            box-sizing: border-box;
+            margin-bottom: 40px;
+            position: relative;
+            overflow: hidden;
+            backdrop-filter: blur(10px); /* Apply blur effect to improve readability */
+        }
+        .service-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+        }
+        .service-item h2 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+        .service-item p {
+            font-size: 1.2rem;
+            color: #eee;
+        }
+        .icon {
+            font-size: 48px;
+            margin-right: 20px;
+            color: #4CAF50;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            transition: transform 0.3s ease;
+        }
+        .service-item:hover .icon {
+            transform: rotate(360deg);
+        }
+
+        /* Background Image */
+        .bg-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            pointer-events: none;
+            background-image: url('https://source.unsplash.com/1200x800/?pharmacy,medicine');
+            background-size: cover;
+            opacity: 0.5; /* Adjust opacity to make text more visible */
+        }
+    </style>
+</head>
+<body>
+
+<div class="bg-image"></div>
+
+<div class="container">
+    <h1>PharmaExpect</h1>
+    <h1>Our Services </h1>
+    <div class="service">
+        <div class="service-item">
+            <i class="icon fas fa-clipboard-list"></i>
+            <h2>Inventory Management</h2>
+            <p>Efficiently manage your pharmacy's inventory, track stock levels, and receive automatic alerts for low stock items.</p>
+        </div>
+        <div class="service-item">
+            <i class="icon fas fa-prescription-bottle"></i>
+            <h2>Prescription Management</h2>
+            <p>Streamline the process of managing prescriptions, including filling, refilling, and tracking prescription history.</p>
+        </div>
+        <div class="service-item">
+            <i class="icon fas fa-users"></i>
+            <h2>Customer Management</h2>
+            <p>Manage customer profiles, prescription history, and provide personalized services to enhance customer satisfaction.</p>
+        </div>
+        <div class="service-item">
+            <i class="icon fas fa-chart-line"></i>
+            <h2>Reporting and Analytics</h2>
+            <p>Generate detailed reports and analytics to gain insights into sales trends, inventory turnover, and other key metrics.</p>
+        </div>
+        <div class="service-item">
+            <i class="icon fas fa-cash-register"></i>
+            <h2>Point of Sale (POS)</h2>
+            <p>Efficiently process sales transactions, accept various payment methods, and integrate seamlessly with your pharmacy management system.</p>
+        </div>
+        <div class="service-item">
+            <i class="icon fas fa-cogs"></i>
+            <h2>Integration and Customization</h2>
+            <p>Integrate third-party systems and customize the pharmacy management system to meet the unique needs of your pharmacy.</p>
+        </div>
+        <!-- New service item -->
+        <div class="service-item">
+            <i class="icon fas fa-pills"></i>
+            <h2>Medication Consultation</h2>
+            <p>Offer personalized medication consultation services to help patients understand their prescriptions, potential side effects, and usage instructions.</p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
